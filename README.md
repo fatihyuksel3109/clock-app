@@ -15,7 +15,7 @@ A sleek and responsive digital clock app built using React. This app displays th
 
 ## Demo
 
-Check out a live demo [here](https://digital-clock-wine-nine.vercel.app/).
+Check out a live demo [here](https://digital-clock-app-theta.vercel.app/).
 
 ## Features
 
