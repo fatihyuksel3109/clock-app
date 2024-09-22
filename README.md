@@ -31,8 +31,8 @@ To run this app locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/fatihyuksel3109/digital-clock-app.git
-   cd digital-clock-app
+   git clone https://github.com/fatihyuksel3109/clock-app.git
+   cd clock-app
    ```
 
 2. Install dependencies:
