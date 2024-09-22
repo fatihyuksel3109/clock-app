@@ -1,4 +1,3 @@
-// src/components/Colon.jsx
 import React from 'react';
 
 const Colon = () => (

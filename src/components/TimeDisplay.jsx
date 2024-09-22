@@ -1,4 +1,3 @@
-// src/components/TimeDisplay.jsx
 import React from 'react';
 import Digit from './Digit';
 import Colon from './Colon';

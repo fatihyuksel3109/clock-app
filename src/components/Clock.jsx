@@ -1,4 +1,3 @@
-// src/components/Clock.jsx
 import React from 'react';
 import TimeDisplay from './TimeDisplay';
 import useTimer from './useTimer';

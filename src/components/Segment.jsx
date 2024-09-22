@@ -1,4 +1,3 @@
-// src/components/Segment.jsx
 import React from 'react';
 
 const Segment = ({ active, className }) => (

@@ -1,4 +1,3 @@
-// src/components/Digit.jsx
 import React from 'react';
 import Segment from './Segment';
 

@@ -1,4 +1,3 @@
-/* General layout and background */
 .clock-container {
   display: flex;
   justify-content: center;
@@ -6,8 +5,8 @@
   padding: 20px;
   flex-wrap: wrap;
   color: white;
-  max-width: 100%; /* Ensure the container does not exceed viewport width */
-  overflow: hidden; /* Prevent overflow from causing horizontal scroll */
+  max-width: 100%; 
+  overflow: hidden; 
 }
 
 @media (max-width: 480px) {
@@ -16,31 +15,17 @@
   }
 }
 
-/* Digit container styling */
+
 .digit-container {
   position: relative;
-  width: 80px;  /* Default size for desktop */
-  height: 140px; /* Default size for desktop */
+  width: 80px;  
+  height: 140px; 
   margin: 0 12px;
-  max-width: 100%; /* Ensure digits fit within the container */
-  flex-shrink: 1;  /* Allow shrinking of digits if necessary */
+  max-width: 100%; 
+  flex-shrink: 1;  
 }
 
-.segment {
-  position: absolute;
-  background-color: #414141; /* Inactive segment color - darker gray */
-  transition: background-color 0.3s ease-in-out;
-  opacity: .5;
-  border-radius: 6px; /* Slight rounding for a more modern look */
-}
 
-.segment.active {
-  opacity: 1;
-  background-color: #ff3b3b; /* Active glowing red color */
-  box-shadow: 0 0 10px #ff3b3b; /* Adding a glow effect for elegance */
-}
-
-/* Responsive sizing for smaller screens */
 @media (max-width: 768px) {
   .digit-container {
     width: 60px;
@@ -92,63 +77,56 @@
   }
 }
 
-/* Segments positioning based on the image reference */
-.segment-a {
-  top: 0;
-  left: 8px;
-  height: 8px;
-  width: calc(100% - 16px);
+
+.segment {
+  position: absolute;
+  background-color: #414141; 
+  transition: background-color 0.3s ease-in-out;
+  opacity: .3;
 }
 
-.segment-b {
-  top: 8px;
+.segment.active {
+  opacity: 1;
+  background-color: #ff3b3b; 
+}
+
+.segment-a, .segment-d, .segment-g {
+  height: 10px;
+  width: calc(100% - 16px);
+  left: 8px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.segment-a { top: 0; }
+.segment-d { bottom: -8px; }
+.segment-g { top: calc(50%); }
+
+.segment-b, .segment-c, .segment-e, .segment-f {
+  width: 10px;
+  height: calc(50% - 8px);
+}
+
+.segment-b, .segment-c {
   right: 0;
-  width: 8px;
-  height: calc(50% - 12px);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
 }
 
-.segment-c {
-  bottom: 8px;
-  right: 0;
-  width: 8px;
-  height: calc(50% - 12px);
-}
-
-.segment-d {
-  bottom: 0;
-  left: 8px;
-  height: 8px;
-  width: calc(100% - 16px);
-}
-
-.segment-e {
-  bottom: 8px;
+.segment-e, .segment-f {
   left: 0;
-  width: 8px;
-  height: calc(50% - 12px);
+  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
 }
 
-.segment-f {
-  top: 8px;
-  left: 0;
-  width: 8px;
-  height: calc(50% - 12px);
-}
+.segment-b, .segment-f { top: 8px; }
+.segment-c, .segment-e { bottom: 0px; }
 
-.segment-g {
-  top: calc(50% - 4px);
-  left: 8px;
-  height: 8px;
-  width: calc(100% - 16px);
-}
 
-/* Colon styles */
+
 .colon-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 140px; /* Matches digit height */
-  margin: 0 10px; /* Adjust spacing between digits */
+  height: 140px; 
+  margin: 0 10px; 
   justify-content: center;
   gap: 10%;
 }
